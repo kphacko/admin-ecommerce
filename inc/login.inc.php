@@ -11,20 +11,21 @@ if (isset($_POST['submit'])) {
          'password'=>$password
      ];
      curl_setopt($ch, CURLOPT_POST, 1);
-     curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
      //Execute the request. multipart/form-data
-     $result = curl_exec($ch); 
-    if($result['error']==true){
+     $result =json_decode( curl_exec($ch),true);
+    //  var_dump($result); 
+    if($result['error']==false){
         session_start();
         $_SESSION['u_role']=$result['user']['role'];
         $_SESSION['u_verified']=$result['user']['verified'];
         $_SESSION['u_fullName']=$result['user']['fullName'];
         $_SESSION['u_priced']=$result['user']['priced'];
         $_SESSION['u_token']=$result['token'];
-
-        header("Location: ../index.php?login=success");
-        exit();
+        // var_dump($_SESSION['u_role']);
+        // header("Location: ../index.php?login=success");
+        // exit();
     }else{
         header("Location: ../login.php?login=false");
         exit();  

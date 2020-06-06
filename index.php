@@ -1,5 +1,7 @@
 <?php
+session_start();
 include_once('header.php');
+
 ?>
         <!--  BEGIN CONTENT AREA  -->
         <div id="content" class="main-content">
