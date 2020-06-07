@@ -5,7 +5,6 @@ if ($_SESSION['u_role']!="ADMIN") {
     exit();  
 }
 ?>
-hgh
 <!DOCTYPE html>
 <html lang="en">
 <head>
