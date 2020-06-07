@@ -24,10 +24,10 @@ if (isset($_POST['submit'])) {
         $_SESSION['u_priced']=$result['user']['priced'];
         $_SESSION['u_token']=$result['token'];
         // var_dump($_SESSION['u_role']);
-        // header("Location: ../index.php?login=success");
-        // exit();
+        header("Location: ../index.php?login=success");
+        exit();
     }else{
-        header("Location: ../login.php?login=false");
+        header("Location: ../login.php?login=false1");
         exit();  
     }
 

@@ -1,12 +1,11 @@
 <?php
-
-if ($_SESSION['u_role']==NULL || $_SESSION['u_verified']==NULL) {
-echo "hello";
-}else{
-    header("Location: ../index.php?login=false");
-    exit();
+session_start();
+if ($_SESSION['u_role']!="ADMIN") {
+    header("Location: login.php?login=false1");
+    exit();  
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
