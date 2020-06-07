@@ -15,26 +15,30 @@ table.dataTable {
     border-left: none!important;
 }
 .table-hover:not(.table-dark) tbody tr:hover .new-control.new-checkbox .new-control-indicator {
-    border: 2px solid #009688;
+    border: 2px solid #1b55e2;
 }
 
 /*Style. 1*/
 
+.style-1 { }
 .style-1 .user-name {
     font-size: 15px;
     font-weight: 600;
     color: #e2a03f;
 }
+.style-1 .profile-img { }
 .style-1 .profile-img img {
     width: 50px;
     height: 50px;
-    border: 4px solid rgba(59, 63, 92, 0.25);
+    border: 2px solid #d3d3d3;
     border-radius: 6px;
+    box-shadow: 0px 0px 14px 3px rgba(126, 142, 177, 0.24);
 }
 
 
 /*Style. 2*/
 
+.style-2 { }
 .style-2 .new-control.new-checkbox .new-control-indicator {
     top: 1px;
 }
@@ -43,10 +47,12 @@ table.dataTable {
     font-weight: 600;
     color: #e2a03f;
 }
+.style-2 .profile-img { }
 .style-2 img.profile-img {
     width: 50px;
     height: 50px;
-    border: 4px solid rgba(59, 63, 92, 0.25);
+    border: 2px solid #d3d3d3;
+    box-shadow: 0px 0px 14px 3px rgba(126, 142, 177, 0.24);
 }
 .style-2 .badge {
     background: transparent;
@@ -78,8 +84,9 @@ table.dataTable {
 .style-3 img.profile-img {
     width: 50px;
     height: 50px;
-    border: 4px solid rgba(59, 63, 92, 0.25);
+    border: 2px solid #d3d3d3;
     border-radius: 6px;
+    box-shadow: 0px 0px 14px 3px rgba(126, 142, 177, 0.24);
 }
 .style-3 .badge {
     background: transparent;
@@ -117,5 +124,5 @@ table.dataTable {
     fill: rgba(231, 81, 90, 0.2196078431372549);
 }
 .style-3.table-hover:not(.table-dark) tbody tr:hover td:first-child {
-    color: #009688!important;
+    color: #1b55e2!important;
 }
