@@ -1,7 +1,7 @@
 <?php
 
 if ($_SESSION['u_role']==NULL || $_SESSION['u_verified']==NULL) {
-
+echo "hello";
 }else{
     header("Location: ../index.php?login=false");
     exit();
