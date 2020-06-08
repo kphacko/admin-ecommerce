@@ -36,7 +36,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $customHeaders);
                                             <tr>
                                                 <th class="checkbox-column text-center"> Record Id </th>
                                                 <th class="text-center">Image</th>
-                                                <th>First Name</th>
+                                                <th>First</th>
                                                 <th>Last Name</th>
                                                 <th>Email</th>
                                                 <th>Mobile No.</th>
@@ -81,6 +81,42 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $customHeaders);
 
 </div>
 
+
+<div id="content" class="main-content">
+
+<div class="row layout-spacing">
+                    <div class="col-lg-12">
+                        <div class="statbox widget box box-shadow">
+                            <div class="widget-header">
+                                <div class="row">
+                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                        <h4>List of clients</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-content widget-content-area">
+                                <div class="table-responsive mb-4">
+                                    <table id="style-3" class="table style-3  table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th class="checkbox-column text-center">Client-Id </th>
+                                                <th class="text-center">Image</th>
+                                                <th class="text-center">Name</th>
+                                                <th class="text-center">Phone</th>
+                                                <th class="text-center">Address</th>
+                                                <th class="text-center">Action</th>
+
+                                            </tr>
+                                        </thead>
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+</div>
 
 
 

@@ -26,7 +26,7 @@
                 <div class="form-container">
                     <div class="form-content">
 
-                        <h1 class="">Log In to <a href="index-2.html"><span class="brand-name">CORK</span></a></h1>
+                        <h1 class="">Log In to <a href="index-2.html"><span class="brand-name">DAXY</span></a></h1>
                         <p class="signup-link">New Here? <a href="auth_register.html">Create an account</a></p>
                         <form class="text-left" method="POST" action="inc/login.inc.php">
                             <div class="form">
@@ -69,7 +69,7 @@
 
                             </div>
                         </form>                        
-                        <p class="terms-conditions">© 2019 All Rights Reserved. <a href="index-2.html">CORK</a> is a product of Designreset. <a href="javascript:void(0);">Cookie Preferences</a>, <a href="javascript:void(0);">Privacy</a>, and <a href="javascript:void(0);">Terms</a>.</p>
+                        <p class="terms-conditions">© 2019 All Rights Reserved. <a href="index-2.html">DAXY</a> is a product of Designreset. <a href="javascript:void(0);">Cookie Preferences</a>, <a href="javascript:void(0);">Privacy</a>, and <a href="javascript:void(0);">Terms</a>.</p>
 
                     </div>                    
                 </div>
