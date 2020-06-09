@@ -79,10 +79,6 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $customHeaders);
                     </div>
                 </div>
 
-</div>
-
-
-<div id="content" class="main-content">
 
 <div class="row layout-spacing">
                     <div class="col-lg-12">
@@ -90,7 +86,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $customHeaders);
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>List of clients</h4>
+                                        <h4>Active clients</h4>
                                     </div>
                                 </div>
                             </div>
