@@ -1,7 +1,7 @@
 <?php
 include_once('header.php');
 session_start();
-$url = 'https://api.nakoda.daxy.in/user/';
+$url = 'https://api.nakoda.daxy.in/product/';
      $ch = curl_init($url);
      $customHeaders = array(
     
@@ -34,13 +34,12 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $customHeaders);
                                     <table id="style-3" class="table style-3  table-hover">
                                         <thead>
                                             <tr>
-                                                <th class="checkbox-column text-center"> Record Id </th>
+                                                <th class="checkbox-column text-center"> Product Id </th>
                                                 <th class="text-center">Image</th>
-                                                <th>First</th>
-                                                <th>Last Name</th>
-                                                <th>Email</th>
-                                                <th>Mobile No.</th>
-                                                <th class="text-center">Status</th>
+                                                <th>D-weight</th>
+                                                <th>D-count</th>
+                                                <th>Gold weight</th>            
+                                                <th class="text-center">Fancy Diamond</th>
                                                 <th class="text-center">Action</th>
                                             </tr>
                                         </thead>
@@ -48,18 +47,18 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $customHeaders);
                                             <?php
                                             $c=1;
                                             // var_dump($result['details']['users']['']);
-                                            foreach($result['details']['users'] as $key => $value) {
+                                            foreach($result['products'] as $key => $value) {
                                              
                                                 echo '<tr>
-                                                <td class="checkbox-column text-center">'.$value['_id'].'</td>
+                                                <td class="checkbox-column text-center">'.$value['styleNumber'].'</td>
                                                 <td class="text-center">
-                                                    <span><img src="assets/img/profile-17.jpg" class="profile-img" alt="avatar"></span>
+                                                    <span><img src="'.$value['images']['main'].'" class="profile-img" alt="avatar"></span>
                                                 </td>
-                                                <td>Donna</td>
-                                                <td>Rogers</td>
-                                                <td>donna@yahoo.com</td>
-                                                <td>555-555-5555</td>
-                                                <td class="text-center"><span class="shadow-none badge badge-primary">Approved</span></td>
+                                                <td>'.$value['diamondWeight'].'</td>
+                                                <td>'.$value['diamondCount'].'</td>
+                                                <td>'.$value['goldWeight'].'</td>
+                                                
+                                                <td class="text-center"><span class="shadow-none badge badge-primary">'.$value['designDetails']['fancyDiamond'].'</span></td>
                                                 <td class="text-center">
                                                     <ul class="table-controls">
                                                         <li><a href="imageAdd.php" class="bs-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2 p-1 br-6 mb-1"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg></a></li>
