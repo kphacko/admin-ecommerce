@@ -1,4 +1,6 @@
 
+
+
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
     <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
     <script src="bootstrap/js/popper.min.js"></script>
@@ -17,6 +19,13 @@
     <script src="plugins/apex/apexcharts.min.js"></script>
     <script src="assets/js/dashboard/dash_1.js"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+    <!-- BEGIN fileupload PLUGINS -->
+    <script src="plugins/highlight/highlight.pack.js"></script>
+    <script src="plugins/blockui/jquery.blockUI.min.js"></script>
+
+    <script src="assets/js/scrollspyNav.js"></script>
+    <script src="plugins/file-upload/file-upload-with-preview.min.js"></script>
+<!-- file upload end plugin -->
 
 
 

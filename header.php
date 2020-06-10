@@ -1,8 +1,8 @@
 <?php
 session_start();
 if ($_SESSION['u_role']!="ADMIN") {
-    header("Location: login.php?login=false1");
-    exit();  
+    // header("Location: login.php?login=false1");
+    // exit();  
 }
 ?>
 <!DOCTYPE html>
@@ -32,6 +32,16 @@ if ($_SESSION['u_role']!="ADMIN") {
     <link rel="stylesheet" type="text/css" href="plugins/table/datatable/dt-global_style.css">
     <link rel="stylesheet" type="text/css" href="plugins/table/datatable/custom_dt_custom.css">
     <!-- END Custom table CUSTOM STYLES -->
+    <!-- font csss links -->
+    <link href="assets/css/scrollspyNav.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="plugins/font-icons/fontawesome/css/regular.css">
+    <link rel="stylesheet" href="plugins/font-icons/fontawesome/css/fontawesome.css">
+    <!-- font css end -->
+
+    <!-- BEGIN file upload css STYLES -->
+    <link href="assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/file-upload/file-upload-with-preview.min.css" rel="stylesheet" type="text/css" />
+    <!-- END file upload STYLES -->
 
 </head>
 <body>
@@ -257,7 +267,7 @@ if ($_SESSION['u_role']!="ADMIN") {
                 <div class="shadow-bottom"></div>
                 <ul class="list-unstyled menu-categories" id="accordionExample">
                     <li class="menu">
-                        <a href="#dashboard" data-active="true" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                        <a href="#clients" data-active="true" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                                 <span>Clients</span>
@@ -266,7 +276,7 @@ if ($_SESSION['u_role']!="ADMIN") {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
                             </div>
                         </a>
-                        <ul class="collapse submenu list-unstyled show" id="dashboard" data-parent="#accordionExample">
+                        <ul class="collapse submenu list-unstyled show" id="clients" data-parent="#accordionExample">
                             <li class="active">
                                 <a href="viewClients.php">View</a>
                             </li>
@@ -277,7 +287,7 @@ if ($_SESSION['u_role']!="ADMIN") {
                     </li>
 
                     <li class="menu">
-                        <a href="#components" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <a href="#orders" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
@@ -287,7 +297,7 @@ if ($_SESSION['u_role']!="ADMIN") {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
                             </div>
                         </a>
-                        <ul class="collapse submenu list-unstyled" id="components" data-parent="#accordionExample">
+                        <ul class="collapse submenu list-unstyled" id="orders" data-parent="#accordionExample">
                             <li>
                                 <a href="component_tabs.html"> Active Order </a>
                             </li>
@@ -297,8 +307,8 @@ if ($_SESSION['u_role']!="ADMIN") {
                            
                         </ul>
                     </li>
-<li class="menu">
-                        <a href="#components" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <li class="menu">
+                        <a href="#products" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                                 
@@ -308,7 +318,29 @@ if ($_SESSION['u_role']!="ADMIN") {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
                             </div>
                         </a>
-                        <ul class="collapse submenu list-unstyled" id="components" data-parent="#accordionExample">
+                        <ul class="collapse submenu list-unstyled" id="products" data-parent="#accordionExample">
+                            <li>
+                                <a href="viewProduct.php"> View Products </a>
+                            </li>
+                            <li>
+                                <a href="addProduct.php"> Add Products  </a>
+                            </li>
+                           
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="#reports" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+
+                                
+                                <span>Reports</span>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </div>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="reports" data-parent="#accordionExample">
                             <li>
                                 <a href="component_tabs.html"> View Products </a>
                             </li>
