@@ -325,6 +325,9 @@ if ($_SESSION['u_role']!="ADMIN") {
                             <li>
                                 <a href="addProduct.php"> Add Products  </a>
                             </li>
+                            <li>
+                                <a href="uploadImage.php"> Upload Images  </a>
+                            </li>
                            
                         </ul>
                     </li>
