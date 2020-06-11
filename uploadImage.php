@@ -22,7 +22,7 @@ echo '
   echo '
     <div class="col-md-4">
       <div class="thumbnail">
-        <a href="/w3images/lights.jpg" target="_blank">
+        <a href="'.$img[$key][0].'" target="_blank">
         <picture>
     <source type="image/webp" srcset="'.$img[$key][0].'">
     
