@@ -10,16 +10,16 @@ include_once('header.php');
 <form method="post">
            <div class="form-group">
                <p>Enter Diamond Weight</p>
-                <input id="t-text" type="number" name="txt" placeholder="Diamond Weight" class="form-control" required>
+                <input id="t-text" type="text" name="txt" placeholder="Diamond Weight" class="form-control" required>
             </div>
             <div class="form-group">
                <p>Enter Gold Weight</p>
-                <input id="t-text" type="number" name="txt" placeholder="Gold Weight" class="form-control" required>
+                <input id="t-text" type="text" name="txt" placeholder="Gold Weight" class="form-control" required>
                 
             </div>
             <div class="form-group">
                <p>Enter Diamond Count</p>
-               <input id="t-text" type="number" name="txt" placeholder="Count" class="form-control" required>
+               <input id="t-text" type="text" name="txt" placeholder="Count" class="form-control" required>
             </div>
             <div class="form-group">
                <p>Enter Manufacturer</p>
