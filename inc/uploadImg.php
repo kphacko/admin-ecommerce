@@ -39,8 +39,8 @@ $result = json_decode(curl_exec($ch),true);
 array_push($images,$result['images']);
     }
 var_dump($images);
-    // header("Location: ../uploadImage.php?status=uploaded&img=".$result);
-    // exit();
+    header("Location: ../uploadImage.php?status=uploaded&img=".urlencode(serialize($images)));
+    exit();
     
     }else{
         header("Location: ../uploadImage.php?status=submit");

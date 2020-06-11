@@ -1,9 +1,47 @@
 <?php
 include_once('header.php');
+
 ?>
 
-
 <div id="content" class="main-content">
+<?php 
+if ($_GET['img']!=NULL) {
+  $img = unserialize(urldecode($_GET['img']));
+      
+// print_r($img);
+echo '
+<div class="container">
+  <h2>Image Gallery</h2>
+ 
+  <div class="row">
+  ';
+  
+  foreach ($img as $key => $value) {
+   
+
+  echo '
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="/w3images/lights.jpg" target="_blank">
+        <picture>
+    <source type="image/webp" srcset="'.$img[$key][0].'">
+    
+    <img src="'.$img[$key][0].'" alt="Lights" style="width:100%">
+</picture>
+
+          
+         
+        </a>
+      </div>
+    </div>
+   ';
+
+  }
+  echo '</div>
+</div>
+';
+}
+?>
 <div class="container mt-5">
 <form action="inc/uploadImg.php" method="POST" enctype="multipart/form-data">
 
