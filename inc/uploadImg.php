@@ -38,7 +38,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $result = json_decode(curl_exec($ch),true);
 array_push($images,$result['images']);
     }
-var_dump($images);
+// var_dump($images);
     header("Location: ../uploadImage.php?status=uploaded&img=".urlencode(serialize($images)));
     exit();
     
