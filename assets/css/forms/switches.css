@@ -79,7 +79,7 @@
 
 /* Outline Switches */
 .switch.s-outline .slider {
-    border: 2px solid #ebedf2;
+    border: 2px solid #f73505;
     background-color: transparent;
     width: 36px;
     height: 19px;
@@ -88,8 +88,8 @@
 .switch.s-outline[class*="s-outline-"] .slider:before {
     bottom: 1px;
     left: 1px;
-    border: 2px solid #bfc9d4;
-    background-color: #bfc9d4;
+    border: 2px solid #fd0000;
+    background-color: #fd0000;
     color: #ebedf2;
     box-shadow: 0 1px 15px 1px rgba(52, 40, 104, 0.25);
 }
