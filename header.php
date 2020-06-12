@@ -42,7 +42,9 @@ if ($_SESSION['u_role']!="ADMIN") {
     <link href="assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
     <link href="plugins/file-upload/file-upload-with-preview.min.css" rel="stylesheet" type="text/css" />
     <!-- END file upload STYLES -->
-
+<!-- switch css  -->
+<link rel="stylesheet" type="text/css" href="assets/css/forms/switches.css">
+<!-- switch end -->
 </head>
 <body>
     <!-- BEGIN LOADER -->

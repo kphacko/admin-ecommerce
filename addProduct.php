@@ -5,9 +5,11 @@ include_once('header.php');
 
 
 <div id="content" class="main-content">
-<div class="container ">
-<div class="col-sm-12">
+
+<div class="container mt-3 mb-3">
+<div class="col-md-12">
 <form method="post">
+<h4>Enter Product details</h4>
            <div class="form-group">
                <p>Enter Diamond Weight</p>
                 <input id="t-text" type="text" name="txt" placeholder="Diamond Weight" class="form-control" required>
@@ -38,10 +40,11 @@ include_once('header.php');
                     </div>
                 </div>
                 <div class="container1 form-group">
-                            <button class="add_form_field btn btn-primary">New Diamond Sieve &nbsp; 
+                            
+                </div>
+                <button class="add_form_field btn btn-primary">New Diamond Sieve &nbsp; 
                                 <span style="font-size:16px; font-weight:bold;">+ </span>
                 </button>
-                </div>
             </div>
             
 <script>
@@ -55,7 +58,7 @@ $(document).ready(function() {
         e.preventDefault();
         if (x < max_fields) {
             x++;
-            $(wrapper).append('<div class="row"><div class="col-sm-6"><input id="t-text" type="text" name="mytext[]" placeholder="Sieve" class="form-control" required></div><div class="col-sm-5"><input id="t-text" type="number" name="mytext[]" placeholder="Count" class="form-control" required></div><div class="col-sm-1"><a href="javascript:void(0);" class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash p-1 br-6 mb-1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></a></div></div>'); //add input box
+            $(wrapper).append('<div id='+x+' class="row mt-2"><div class="col-sm-6"><input id="t-text" type="text" name="mytext[]" placeholder="Sieve" class="form-control" required></div><div class="col-sm-5"><input id="t-text" type="number" name="mytext[]" placeholder="Count" class="form-control" required></div><div class="col-sm-1"><a id="'+x+'" href="javascript:void(0);" class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash p-1 br-6 mb-1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></a></div></div>'); //add input box
         } else {
             alert('You Reached the limits')
         }
@@ -63,7 +66,9 @@ $(document).ready(function() {
 
     $(wrapper).on("click", ".delete", function(e) {
         e.preventDefault();
-        $(this).closest('.row').remove();
+        // $(this).closest('.row').remove();
+        $("#"+this.id).remove();
+
         x--;
     })
 });
@@ -76,20 +81,37 @@ $(document).ready(function() {
 <div class="form-group">
     <p>Enter Design Details</p>
         
-               <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+               <div class="form-check mt-2">
+                                            <label class="switch s-icons s-outline  s-outline-primary   mr-2" style="height: 11px !important;">
+                                                <input type="checkbox" >
+                                                <span class="slider round"></span>
+                                            </label>
+                
+                                        
                     <label class="form-check-label" for="exampleCheck1" style = "color:#515365">Featured</label>
                 </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <div class="form-check mt-2">
+                <label class="switch s-icons s-outline  s-outline-primary   mr-2" style="height: 11px !important;">
+                                                <input type="checkbox" >
+                                                <span class="slider round"></span>
+                                            </label>
+                
                     <label class="form-check-label" for="exampleCheck1" style = "color:#515365">Highest Selling</label>
                 </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <div class="form-check mt-2">
+                <label class="switch s-icons s-outline  s-outline-primary   mr-2" style="height: 11px !important;">
+                                                <input type="checkbox" >
+                                                <span class="slider round"></span>
+                                            </label>
+                
                     <label class="form-check-label" for="exampleCheck1" style = "color:#515365">Fancy Diamond</label>
                 </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <div class="form-check mt-2">
+                <label class="switch s-icons s-outline  s-outline-primary   mr-2" style="height: 11px !important;">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                
                     <label class="form-check-label" for="exampleCheck1" style = "color:#515365">New</label>
                 </div>
         
