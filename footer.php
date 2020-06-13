@@ -86,7 +86,7 @@
                "sLengthMenu": "Results :  _MENU_",
             },
             "stripeClasses": [],
-            "lengthMenu": [5, 10, 20, 50],
+            "lengthMenu": [5, 10, 20, 50 ,100],
             "pageLength": 5
         });
 

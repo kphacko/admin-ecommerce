@@ -52,7 +52,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $customHeaders);
                                                 echo '<tr>
                                                 <td class="checkbox-column text-center">'.$value['styleNumber'].'</td>
                                                 <td class="text-center">
-                                                    <span><img src="'.$value['images']['main'].'" class="profile-img" alt="avatar"></span>
+                                                    <span><img src="'.$value['images']['yellow'].'" class="profile-img" alt="avatar"></span>
                                                 </td>
                                                 <td>'.$value['diamondWeight'].'</td>
                                                 <td>'.$value['diamondCount'].'</td>
